@@ -154,6 +154,8 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
+Olowookere Busayomi - [Github](https://github.com/busayo524/[Twitter](https://x.com/Bjessssss)
+Ohwoka Emmanuel - [Github]()[Twitter](https://x.com/emmyprime2015)
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)
 
