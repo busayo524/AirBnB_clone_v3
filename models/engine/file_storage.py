@@ -33,6 +33,33 @@ class FileStorage:
                     new_dict[key] = value
             return new_dict
         return self.__objects
+    
+    def get(self, cls, id):
+        """
+        gets specific object
+        :param cls: class
+        :param id: id of instance
+        :return: object or None
+        """
+        if cls is not None:
+            res = list(
+                filter(
+                    lambda x: type(x) is cls and x.id == id,
+                    self.__objects.values()
+                )
+            )
+            if res:
+                return res[0]
+        return None
+
+    def count(self, cls=None):
+        """
+        count of instances
+        :param cls: class
+        :return: number of instances
+        """
+        return len(self.all(cls))
+
 
     def new(self, obj):
         """sets in __objects the obj with key <obj class name>.id"""
