@@ -10,6 +10,14 @@ from api.v1.views import app_views
 app = Flask(__name__)
 app.register_blueprint(app_views)
 
+@app.teardown_appcontext
+def downtear(self):
+    '''
+    Closes the storage connection at the end of the request.
+    '''
+    storage.close()
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     '''return render_template'''
