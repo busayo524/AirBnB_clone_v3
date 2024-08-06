@@ -8,7 +8,7 @@ from models import storage
 
 @app_views.route('/status', strict_slashes=False)
 def api_status():
-    """ret
+    """Returns the count of each object by type
     """
 
     response = {'status': 'OK'}
@@ -18,9 +18,14 @@ def api_status():
 @app_views.route('/stats', strict_slashes=False)
 def stuff():
     '''JSON Responses'''
-    todos = {'states': 'State', 'users': 'User',
-            'amenities': 'Amenity', 'cities': 'City',
-            'places': 'Place', 'reviews': 'Review'}
+    todos = {
+        'states': 'State',
+        'users': 'User',
+        'amenities': 'Amenity',
+        'cities': 'City',
+        'places': 'Place',
+        'reviews': 'Review'
+    }
     for key in todos:
         todos[key] = storage.count(todos[key])
     return jsonify(todos)
