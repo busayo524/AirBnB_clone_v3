@@ -33,7 +33,7 @@ class FileStorage:
                     new_dict[key] = value
             return new_dict
         return self.__objects
-    
+
     def get(self, cls, id):
         """
         gets specific object
@@ -59,7 +59,6 @@ class FileStorage:
         :return: number of instances
         """
         return len(self.all(cls))
-
 
     def new(self, obj):
         """sets in __objects the obj with key <obj class name>.id"""

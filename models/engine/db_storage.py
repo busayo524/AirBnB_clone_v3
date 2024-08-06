@@ -50,7 +50,7 @@ class DBStorage:
                     key = obj.__class__.__name__ + '.' + obj.id
                     new_dict[key] = obj
         return (new_dict)
-    
+
     def get(self, cls, id):
         """
         fetches specific object
@@ -70,7 +70,6 @@ class DBStorage:
         :return: count of instances of a class
         """
         return len(self.all(cls))
-
 
     def new(self, obj):
         """add the object to the current database session"""
